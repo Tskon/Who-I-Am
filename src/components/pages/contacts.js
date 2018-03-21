@@ -15,9 +15,6 @@ export default class Contacts extends React.Component{
           <li>Telegram: @beatxd</li>
           <li>E-mail: tsekhmeister.k@gmail.com</li>
         </ul>
-        <p>
-          Живу в Санкт-Петербурге, спокойно отношусь к командировкам.
-        </p>
       </div>
     );
   }

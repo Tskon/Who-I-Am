@@ -10,27 +10,24 @@ export default class Skills extends React.Component{
     return(
       <div className="content">
         <h1>Навыки</h1>
-        <div className="skills-wrapper">
-          <ul>
-            <b>FrontEnd</b>
-            <li>JavaScript (es6)</li>
-            <li>React</li>
-            <li>Redux</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Sass/Scss</li>
-          </ul>
-          <ul>
-            <b>BackEnd</b>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>PHP (синтаксис)</li>
-          </ul>
-          <ul>
-            <b>Сборка</b>
-            <li>Webpack</li>
-            <li>Babel</li>
-          </ul>
+        <div className="content__row skills-wrapper">
+          <div>
+            <h3>FrontEnd</h3>
+            <img src="../../img/frontend.png"/>
+            <p>JavaScript (es6), HTML5, CSS3, препроцессоры Sass/Scss, современная верстка с React, Redux</p>
+          </div>
+          <div>
+            <h3>BackEnd</h3>
+            <img src="../../img/frontend.png"/>
+            <p>Есть опыт работы с бекендом: Node.js, Express, PHP. Не будет проблемы найти общий язык с
+              программистами backend. Строю готовый для подключения к серверной части код.</p>
+          </div>
+          <div>
+            <h3>Сборка</h3>
+            <img src="../../img/frontend.png"/>
+            <p>Webpack + Babel + плагины для оптимизации картинок и кода, проставления префиксов. Получается
+              кроссбраузерный, чистый и простой в поддержке код</p>
+          </div>
         </div>
       </div>
     );
