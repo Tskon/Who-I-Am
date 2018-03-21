@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  a {
+  & a {
     flex-grow: 1;
     padding: 0 5px;
     height: 50px;
@@ -11,11 +11,11 @@
     text-align: center;
     font-size: 2em;
     background-color: transparent;
-    color: $dark;
+    color: $light;
     text-decoration: none;
-    &:hover {
-      background-color: $dark;
-      color: $light;
+    &:hover li{
+      background-color: $light;
+      color: $second;
     }
   }
 }

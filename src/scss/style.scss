@@ -3,15 +3,43 @@
 @import "menu";
 @import "content";
 
-
 main {
   display: block;
   padding: 0 10px;
   height: 100vh;
-  background: linear-gradient(45deg, #f1efff, #f9ffef);
+  color: $light;
+  font-size: 1.2em;
+  //background: linear-gradient(45deg, #f1efff, #f9ffef);
+  background: #003e88;
+  background-image:
+          /*   Первая сетка   */
+          linear-gradient(rgba(22,109,188,0.8) 3px, transparent 0),
+          linear-gradient(90deg, rgba(22,109,188,0.8) 3px, transparent 0),
+            /*   Вторая сетка   */
+          linear-gradient(rgba(26,98,176,0.6) 2px, transparent 0),
+          linear-gradient(90deg, rgba(26,98,176,0.6) 2px, transparent 0),
+            /*   Третья сетка   */
+          linear-gradient(rgba(0,94,170,0.3) 1px, transparent 0),
+          linear-gradient(90deg, rgba(0,94,170,0.3) 1px, transparent 0),
+            /*   Радиальный градиент   */
+          radial-gradient(circle,#0054ad, #003e88);
+  background-size:
+          /*   Размеры трёх сеток   */
+          128px 128px, 128px 128px,
+          32px 32px, 32px 32px,
+          16px 16px, 16px 16px,
+            /*   Размер радиального градиента   */
+          100% 100%;
 }
 
 h1 {
   text-align: center;
 }
 
+a {
+  color: $link;
+  font-size: 1.5em;
+  :hover{
+    color: darken($link, 10%);
+  }
+}

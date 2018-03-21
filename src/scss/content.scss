@@ -8,3 +8,13 @@
     text-align: left;
   }
 }
+
+// hello
+.my-photo-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid 2px $second;
+  background: url("../img/me.jpg");
+}

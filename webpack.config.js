@@ -50,6 +50,12 @@ module.exports = {
           ],
           fallback: "style-loader",
         })
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          { loader: 'file-loader', options: {} }
+        ]
       }
     ]
   },
@@ -63,7 +69,10 @@ module.exports = {
     new ExtractTextPlugin("../css/[name].css"),
     // new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin(
-      [{from:'./index.html', to: '../'}]
+      [
+        {from:'./index.html', to: '../'},
+        {from:'./img', to: '../img'}
+        ]
     )
   ]
 };
@@ -72,11 +81,11 @@ if (isProduction) {
   module.exports.plugins.push(
     new UglifyJSPlugin({sourceMap: true})
   );
-  // module.exports.plugins.push(
-  //   new ImageminPlugin({
-  //     test: /\.(png|jpe?g|dif|svg)$/i
-  //   })
-  // );
+  module.exports.plugins.push(
+    new ImageminPlugin({
+      test: /\.(png|jpe?g|dif)$/i
+    })
+  );
   module.exports.plugins.push(
     new webpack.LoaderOptionsPlugin({
       minimize:true
