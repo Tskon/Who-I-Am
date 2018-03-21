@@ -1,11 +1,9 @@
 import React from 'react';
 
 // components for blog layout
-import BlogHeader from '../components/blog-header';
-import Jumbotron from '../components/blog-jumbotron';
-import RowMarketing from '../components/blog-sub-pages/blog-marketing';
-import Modal from '../components/login-modal';
-import Menu from '../components/blog-sub-menu/blog-menu';
+import Menu from '../components/menu';
+import Hello from '../components/pages/hello';
+
 
 //data
 import data from '../data/data';
@@ -17,7 +15,7 @@ export default class Blog extends React.Component {
   render() {
     return (
       <div className="container">
-        <Modal/>
+        <Menu/>
         <BlogHeader/>
         <Jumbotron data={data.jumbotronSwitcher}/>
         <Menu menuName="Sub Menu" path={window.location.pathname}/>
