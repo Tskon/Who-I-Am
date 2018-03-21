@@ -3,13 +3,11 @@
 @import "menu";
 @import "content";
 
-main {
-  display: block;
-  padding: 0 10px;
-  height: 100vh;
-  color: $light;
-  font-size: 1.2em;
-  //background: linear-gradient(45deg, #f1efff, #f9ffef);
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   background: #003e88;
   background-image:
           /*   Первая сетка   */
@@ -30,6 +28,15 @@ main {
           16px 16px, 16px 16px,
             /*   Размер радиального градиента   */
           100% 100%;
+}
+
+main {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  color: $light;
+  font-size: 1.2em;
+  //background: linear-gradient(45deg, #f1efff, #f9ffef);
 }
 
 h1 {

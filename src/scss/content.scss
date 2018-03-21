@@ -1,5 +1,6 @@
 .content {
-  width: 100%;
+  width: 98%;
+  padding: 50px 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,12 +10,38 @@
   }
 }
 
+.content__row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+ul b{
+  font-size: 1.5em;
+  line-height: 40px;
+}
+
 // hello
 .my-photo-wrapper {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  border: solid 2px $second;
-  background: url("../img/me.jpg");
+  border: solid 2px white;
+  background: url("../img/me.jpg") ;
+  background-size: 100%;
+}
+
+// portfolio
+.portfolio-item{
+  width: 100%;
+  padding: 10px;
+
+}
+
+@media (min-device-width: 600px) and (max-width: 600px ){
+  .content__row{
+    flex-direction: column;
+  }
 }
