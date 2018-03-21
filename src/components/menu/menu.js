@@ -6,12 +6,12 @@ import Item from './menu-item';
 
 export default class Menu extends React.Component {
   render() {
-    let items = menuItems.map((item) => {
-        <Item data={item}/>
+    let items = menuItems.map((item, i) => {
+        return <Item data={item} key={i}/>;
     });
 
     return (
-      <nav>
+      <nav className="main-menu">
         {items}
       </nav>
     );

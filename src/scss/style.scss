@@ -1,5 +1,14 @@
 @import "~normalize.css";
+@import "variables";
+@import "menu";
+@import "content";
 
-.content{
-
+main {
+  background-color: $light;
+  padding: 0 10px;
 }
+
+h1{
+  text-align: center;
+}
+

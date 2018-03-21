@@ -1,0 +1,21 @@
+.main-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  a {
+    flex-grow: 1;
+    padding: 0 5px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+    background-color: $light;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      background-color: $dark;
+      color: $light;
+    }
+  }
+}

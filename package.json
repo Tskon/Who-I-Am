@@ -1,12 +1,12 @@
 {
-  "name": "lesson-2-webpack",
+  "name": "WhoIAm",
   "version": "0.0.1",
-  "description": "webpack testing project",
+  "description": "resume-on-react",
   "main": "dist/index.html",
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
-    "server": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open",
     "production": "webpack -p"
   },
   "author": "TsKon",
