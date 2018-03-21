@@ -20,9 +20,9 @@ export default class Skills extends React.Component {
           </div>
           <div className="portfolio-item">
             <h2>Текущий проект:</h2>
-            <a href="http://bredik.space/" target="_blank">
-              <h3>Bredik</h3>
-            </a>
+            <b>
+              <a href="http://bredik.space/" target="_blank">Bredik</a>
+            </b>
             <p>
               Проект представляет собой ресурс для готовых решений для разработчиков, которые можно легко
               внедрить. Развивают три человека.

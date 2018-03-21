@@ -5,19 +5,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  li{
+  li {
     text-align: left;
   }
 }
 
-.content__row{
+.content__row {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-ul b{
+ul b {
   font-size: 1.5em;
   line-height: 40px;
 }
@@ -29,18 +29,31 @@ ul b{
   border-radius: 50%;
   overflow: hidden;
   border: solid 2px white;
-  background: url("../img/me.jpg") ;
+  background: url("../img/me.jpg");
   background-size: 100%;
 }
 
+// skills
+.skills-wrapper {
+  > div {
+    width: 450px;
+    padding: 0 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: $second solid 1px;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
+
 // portfolio
-.portfolio-item{
+.portfolio-item {
   width: 100%;
   padding: 10px;
 }
 
-@media (min-device-width: 600px) and (max-width: 600px ){
-  .content__row{
+@media (min-device-width: 600px) and (max-width: 600px) {
+  .content__row {
     flex-direction: column;
   }
 }

@@ -8,35 +8,17 @@ body{
   height: 100%;
   display: flex;
   justify-content: center;
-  background: #003e88;
-  background-image:
-          /*   Первая сетка   */
-          linear-gradient(rgba(22,109,188,0.8) 3px, transparent 0),
-          linear-gradient(90deg, rgba(22,109,188,0.8) 3px, transparent 0),
-            /*   Вторая сетка   */
-          linear-gradient(rgba(26,98,176,0.6) 2px, transparent 0),
-          linear-gradient(90deg, rgba(26,98,176,0.6) 2px, transparent 0),
-            /*   Третья сетка   */
-          linear-gradient(rgba(0,94,170,0.3) 1px, transparent 0),
-          linear-gradient(90deg, rgba(0,94,170,0.3) 1px, transparent 0),
-            /*   Радиальный градиент   */
-          radial-gradient(circle,#0054ad, #003e88);
-  background-size:
-          /*   Размеры трёх сеток   */
-          128px 128px, 128px 128px,
-          32px 32px, 32px 32px,
-          16px 16px, 16px 16px,
-            /*   Размер радиального градиента   */
-          100% 100%;
+  //background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(206,202,215,1) 41%, rgba(233,214,242,1) 100%);
+  background-color: lighten(#5796C7, 30%);
 }
 
 main {
   display: block;
   height: 100vh;
   width: 100%;
-  color: $light;
+  color: $second;
+  transition: 200ms;
   font-size: 1.2em;
-  //background: linear-gradient(45deg, #f1efff, #f9ffef);
 }
 
 h1 {
@@ -46,7 +28,8 @@ h1 {
 a {
   color: $link;
   font-size: 1.5em;
+  transition: 200ms;
   :hover{
-    color: darken($link, 10%);
+    color: darken($link, 20%);
   }
 }

@@ -1,26 +1,39 @@
 .main-menu {
   list-style: none;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background-color: $second;
-  border-bottom: 2px solid white;
+  //background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(240,249,249,1) 41%, rgba(174,219,224,1) 100%);
+  background-color: $light;
+  &:after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    background: linear-gradient(-90deg, rgba(66,116,154,1) 0%, rgba(206,202,215,1) 41%, rgba(66,116,154,1) 100%);
+  }
   & a {
     flex-grow: 1;
     padding: 0 5px;
-    height: 50px;
-    line-height: 50px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
     font-size: 2em;
-    background-color: transparent;
-    color: $light;
+    background-color: rgba(0, 0, 0, 0.03);
+    //color: $second;
+    color: $second;
     text-decoration: none;
-    &:hover{
-      background-color: $light;
+    transition: 200ms;
+    &:hover, .main-menu__item_active{
+      background-color: $second;
       li{
-        color: $second;
+        color: $light;
       }
     }
   }
