@@ -15,6 +15,7 @@ export default class Blog extends React.Component {
   constructor() {
     super(...arguments);
   }
+
   render() {
     return (
       <div className="container">

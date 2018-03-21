@@ -1,6 +1,11 @@
 import React from 'react';
+import {contentHeight} from '../../lib/content';
 
 export default class Contacts extends React.Component{
+  componentDidMount(){
+    contentHeight('.content');
+  }
+
   render() {
     return (
       <div className='content'>
@@ -10,6 +15,9 @@ export default class Contacts extends React.Component{
           <li>Telegram: @beatxd</li>
           <li>E-mail: tsekhmeister.k@gmail.com</li>
         </ul>
+        <p>
+          Живу в Санкт-Петербурге, спокойно отношусь к командировкам.
+        </p>
       </div>
     );
   }

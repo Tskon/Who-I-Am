@@ -1,6 +1,11 @@
 import React from 'react';
+import {contentHeight} from '../../lib/content';
 
 export default class Skills extends React.Component {
+  componentDidMount(){
+    contentHeight('.content');
+  }
+
   render() {
     return (
       <div className="content">

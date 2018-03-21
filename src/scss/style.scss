@@ -3,12 +3,15 @@
 @import "menu";
 @import "content";
 
+
 main {
-  background-color: $light;
+  display: block;
   padding: 0 10px;
+  height: 100vh;
+  background: linear-gradient(45deg, #f1efff, #f9ffef);
 }
 
-h1{
+h1 {
   text-align: center;
 }
 

@@ -1,4 +1,4 @@
 window.onload = () => {
-  const contentWrapper = document.querySelector('main');
-  contentWrapper.style.minHeight = (document.documentElement.clientHeight - 100) + 'px';
+  // const main = document.querySelector('main');
+  // main.style.minHeight = (document.documentElement.clientHeight - 100) + 'px';
 };
