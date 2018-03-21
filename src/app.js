@@ -1,21 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {HashRouter} from 'react-router-dom';
 
 // layout
-import Blog from './layouts/index-page';
+import Index from './layouts/index-page';
 // components
 
 
 ReactDOM.render(
-
-    <Router history={browserHistory}>
-      <Route path="/" component={Blog}>
-        <IndexRoute component={Marketing}/>
-        <Route path="followers" component={Followers}/>
-        <Route path="*" component={PageNotFound}/>
-      </Route>
-    </Router>
-  </Provider>
+  <HashRouter>
+    <Index/>
+  </HashRouter>
   , document.querySelector('main')
 );

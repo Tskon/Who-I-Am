@@ -5,7 +5,10 @@ const menuItems = [
     title: 'Hello',
     link: '/#hello'
   },
-
+  {
+    title: 'Contacts',
+    link: '/#contacts'
+  }
 ];
 
-export default {};
+exports.menuItems = menuItems;
