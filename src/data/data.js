@@ -1,6 +1,6 @@
 import React from 'react';
 
-const menuItems = [
+const mainMenuItems = [
   {
     title: 'Приветствую!',
     link: '/'
@@ -19,4 +19,16 @@ const menuItems = [
   }
 ];
 
-exports.menuItems = menuItems;
+const portfolioMenuItems = [
+  {
+    title: 'Bredik',
+    link: '/portfolio/bredik'
+  },
+  {
+    title: 'Этот сайт',
+    link: '/portfolio/resume'
+  }
+];
+
+exports.menuItems = mainMenuItems;
+exports.portfolioMenuItems = portfolioMenuItems;

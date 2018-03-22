@@ -10,9 +10,9 @@ export default class Menu extends React.Component {
     });
 
     return (
-      <nav className="main-menu">
+      <ul className="main-menu">
         {items}
-      </nav>
+      </ul>
     );
   }
 }
