@@ -18,6 +18,7 @@ export default class Blog extends React.Component {
 
   render() {
     return (
+
       <div className="container">
         <Menu/>
         <Switch>
@@ -26,6 +27,7 @@ export default class Blog extends React.Component {
           <Route path='/skills' component={Skills}/>
           <Route path='/portfolio' component={Portfolio}/>
         </Switch>
+
       </div>
     )
   }

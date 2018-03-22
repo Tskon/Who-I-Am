@@ -21,11 +21,23 @@ exports.setBurger = (selector, toggleClass) => {
     }
   }
 
-  itemsList.addEventListener("click", () => {
+  burger.addEventListener("click", () => {
     toggleList();
   });
 
-  burger.addEventListener("click", () => {
-    toggleList();
+  itemsList.addEventListener("click", () => {
+    if (clickDelayTimer === null) {
+      burger.classList.remove("active");
+      burger.parentNode.classList.remove("is-open");
+      itemsList.classList.add(toggleClass);
+      if (!burger.classList.contains("active")) {
+        burger.classList.add("closing");
+      }
+      clickDelayTimer = setTimeout(() => {
+        burger.classList.remove("closing");
+        clearTimeout(clickDelayTimer);
+        clickDelayTimer = null;
+      }, clickDelay);
+    }
   });
 };

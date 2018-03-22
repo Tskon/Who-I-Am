@@ -1,8 +1,20 @@
 @import "~normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Lobster');
 @import "variables";
 @import "burger-btn";
 @import "menu";
 @import "content";
+
+
+html{
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  //overflow:  hidden;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
 
 body{
   width: 100%;

@@ -1,8 +1,7 @@
 .main-menu {
+  font-family: 'Lobster', cursive;
   list-style: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -10,19 +9,33 @@
   margin: 0;
   padding: 0;
   background-color: $light;
-  &:after{
+  &:after {
     content: "";
     display: block;
     height: 3px;
     width: 100%;
     position: absolute;
     top: 100px;
-    background: linear-gradient(-90deg, rgba(66,116,154,1) 0%, rgba(206,202,215,1) 41%, rgba(66,116,154,1) 100%);
-
+    background: linear-gradient(to right, yellow, green, orange, violet, cyan, blue);
+    transition: 0.3s;
   }
-  &:hover{
-    &:after{
-      background: linear-gradient(-90deg, rgba(206,202,215,1) 0%, rgba(66,116,154,1) 41%, rgba(206,202,215,1) 100%);
+  &:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+    &:after {
+      opacity: 0;
     }
   }
   & a {
@@ -37,44 +50,44 @@
     color: $second;
     text-decoration: none;
     transition: 200ms;
-    &:hover{
+    &:hover {
       background-color: $second;
-      li{
+      li {
         color: $light;
       }
     }
   }
 }
 
-.main-menu__item_active{
+.main-menu__item_active {
   background-color: darken($second, 5%) !important;
-  li{
+  li {
     color: $light;
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 }
 
-.main-menu__burger{
+.main-menu__burger {
   display: none;
 }
 
-.menu-hidden{
+.menu-hidden {
   display: flex;
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 800px) {
   .main-menu {
     flex-direction: column;
     position: fixed;
     top: 90px;
-    &:after{
+    &:after {
       display: none;
     }
   }
-  .main-menu__burger{
+  .main-menu__burger {
     display: block;
   }
-  .menu-hidden{
+  .menu-hidden {
     display: none;
   }
 }
