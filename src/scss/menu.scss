@@ -39,8 +39,9 @@
   }
 }
 .main-menu__item_active{
-  background-color: $second !important;
+  background-color: darken($second, 5%) !important;
   li{
     color: $light;
+    text-decoration: underline;
   }
 }
