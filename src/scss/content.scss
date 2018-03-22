@@ -44,16 +44,15 @@ ul b {
     border: $second solid 1px;
     background-color: rgba(0, 0, 0, 0.03);
   }
+  @media all and (max-width: 520px) {
+    img{
+      width: 90%;
+    }
+  }
 }
 
 // portfolio
 .portfolio-item {
   width: 100%;
   padding: 10px;
-}
-
-@media (min-device-width: 600px) and (max-width: 600px) {
-  .content__row {
-    flex-direction: column;
-  }
 }

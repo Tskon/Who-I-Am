@@ -1,5 +1,6 @@
 @import "~normalize.css";
 @import "variables";
+@import "burger-btn";
 @import "menu";
 @import "content";
 
@@ -32,4 +33,8 @@ a {
   :hover{
     color: darken($link, 20%);
   }
+}
+
+.hidden{
+  display: none;
 }

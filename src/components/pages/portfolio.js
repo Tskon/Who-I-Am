@@ -13,12 +13,11 @@ export default class Skills extends React.Component {
   }
 
   render() {
-    console.log(portfolioMenuItems);
     const menuItems = portfolioMenuItems.map((item, i)=>{
       return <MenuItem data={item} key={i}/>;
     });
     return (
-      <div className="content">
+      <div className="content portfolio">
         <ul className="portfolio-menu">
           {menuItems}
           <Switch>
