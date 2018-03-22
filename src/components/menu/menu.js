@@ -1,6 +1,5 @@
 import React from 'react';
 import {menuItems} from '../../data/data';
-import {Link} from 'react-router-dom';
 
 import Item from './menu-item';
 

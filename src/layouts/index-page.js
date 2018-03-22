@@ -22,7 +22,6 @@ export default class Blog extends React.Component {
         <Menu/>
         <Switch>
           <Route exact path='/' component={Hello}/>
-          <Route path='/hello' component={Hello}/>
           <Route path='/contacts' component={Contacts}/>
           <Route path='/skills' component={Skills}/>
           <Route path='/portfolio' component={Portfolio}/>

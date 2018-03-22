@@ -3,19 +3,19 @@ import React from 'react';
 const menuItems = [
   {
     title: 'Hello',
-    link: '/#/hello'
+    link: '/'
   },
   {
     title: 'Skills',
-    link: '/#/skills'
+    link: '/skills'
   },
   {
     title: 'Portfolio',
-    link: '/#/portfolio'
+    link: '/portfolio'
   },
   {
     title: 'Contacts',
-    link: '/#/contacts'
+    link: '/contacts'
   }
 ];
 
