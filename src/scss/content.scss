@@ -34,6 +34,10 @@ ul b {
   border: solid 2px white;
   background: url("../img/me.jpg");
   background-size: 100%;
+  @media all and(max-height: 670px){
+    width: 200px;
+    height: 200px;
+  }
 }
 
 // skills
@@ -59,3 +63,5 @@ ul b {
   width: 100%;
   padding: 10px;
 }
+
+// contacts

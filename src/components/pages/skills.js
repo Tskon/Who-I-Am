@@ -9,7 +9,7 @@ export default class Skills extends React.Component{
   render(){
     return(
       <div className="content">
-        <h1>Навыки</h1>
+        {/*<h1>Навыки</h1>*/}
         <div className="content__row skills-wrapper">
           <div>
             <h3>FrontEnd</h3>
