@@ -59,9 +59,28 @@ ul b {
 }
 
 // portfolio
-.portfolio-item {
-  width: 100%;
-  padding: 10px;
+.portfolio-menu{
+  position: fixed;
+  top: 20%;
+  left: 0;
+  .portfolio-menu__title{
+    margin: 0;
+    text-align: center;
+    color: $light;
+    background-color: $second;
+    padding: 0 30px 5px;
+    border-top-right-radius: 10px;
+    line-height: 43px;
+  }
+  .portfolio-menu__list{
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+  }
+}
+
+.portfolio-content{
+  margin-left: 200px;
 }
 
 // contacts

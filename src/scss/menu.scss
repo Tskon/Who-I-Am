@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   background-color: $light;
+  z-index: 10;
   &:after {
     content: "";
     display: block;

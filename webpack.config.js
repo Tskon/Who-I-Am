@@ -67,7 +67,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("../css/[name].css"),
-    // new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin(
       [
         {from:'./index.html', to: '../'},
@@ -81,10 +80,13 @@ if (isProduction) {
   module.exports.plugins.push(
     new UglifyJSPlugin({sourceMap: true})
   );
+  // module.exports.plugins.push(
+  //   new ImageminPlugin({
+  //     test: /\.(png|jpe?g|dif)$/i
+  //   })
+  // );
   module.exports.plugins.push(
-    new ImageminPlugin({
-      test: /\.(png|jpe?g|dif)$/i
-    })
+    new CleanWebpackPlugin(['dist'])
   );
   module.exports.plugins.push(
     new webpack.LoaderOptionsPlugin({

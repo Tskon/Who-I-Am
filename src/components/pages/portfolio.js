@@ -13,18 +13,23 @@ export default class Skills extends React.Component {
   }
 
   render() {
-    const menuItems = portfolioMenuItems.map((item, i)=>{
+    const menuItems = portfolioMenuItems.map((item, i) => {
       return <MenuItem data={item} key={i}/>;
     });
     return (
-      <div className="content portfolio">
-        <ul className="portfolio-menu">
-          {menuItems}
+      <div className="content">
+        <div className="portfolio-menu">
+          <h2 className="portfolio-menu__title">Проекты</h2>
+          <ul className="portfolio-menu__list">
+            {menuItems}
+          </ul>
+        </div>
+        <div className="portfolio-content">
           <Switch>
             <Route path="/portfolio/bredik" component={Bredik}/>
             <Route path="/portfolio/resume" component={Resume}/>
           </Switch>
-        </ul>
+        </div>
       </div>
     );
   }
