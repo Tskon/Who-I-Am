@@ -8,7 +8,7 @@
   li {
     text-align: left;
   }
-  h1{
+  h1 {
     font-family: 'Lobster', cursive;
   }
 }
@@ -34,7 +34,7 @@ ul b {
   border: solid 2px white;
   background: url("../img/me.jpg");
   background-size: 100%;
-  @media all and(max-height: 670px){
+  @media all and(max-height: 670px) {
     width: 200px;
     height: 200px;
   }
@@ -52,18 +52,21 @@ ul b {
     background-color: rgba(0, 0, 0, 0.03);
   }
   @media all and (max-width: 520px) {
-    img{
+    img {
       width: 90%;
     }
   }
 }
 
 // portfolio
-.portfolio-menu{
+.portfolio-menu {
   position: fixed;
   top: 20%;
   left: 0;
-  .portfolio-menu__title{
+  @media all and (max-height: 800px) {
+    top: 160px;
+  }
+  .portfolio-menu__title {
     margin: 0;
     text-align: center;
     color: $light;
@@ -72,15 +75,24 @@ ul b {
     border-top-right-radius: 10px;
     line-height: 43px;
   }
-  .portfolio-menu__list{
+  .portfolio-menu__list {
     list-style: none;
     margin: 0;
     padding-left: 10px;
   }
 }
 
-.portfolio-content{
-  margin-left: 200px;
+.portfolio-content {
+  margin: 0 0 50px 200px;
+}
+
+.portfolio-item__row {
+
+}
+
+.portfolio-item__title {
+
+  padding-top: 50px;
 }
 
 // contacts

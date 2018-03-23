@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import MenuItem from '../menu/portfolio-menu-item';
 import Bredik from '../portfolio/bredik';
 import Resume from '../portfolio/resume';
+import Git from '../portfolio/git';
 
 export default class Skills extends React.Component {
   componentDidMount() {
@@ -28,6 +29,7 @@ export default class Skills extends React.Component {
           <Switch>
             <Route path="/portfolio/bredik" component={Bredik}/>
             <Route path="/portfolio/resume" component={Resume}/>
+            <Route path="/portfolio/git" component={Git}/>
           </Switch>
         </div>
       </div>
