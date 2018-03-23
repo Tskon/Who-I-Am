@@ -56,6 +56,10 @@ module.exports = {
         use: [
           { loader: 'file-loader', options: {publicPath:'../../img', name: '[name].[ext]'} }
         ]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader'
       }
     ]
   },
@@ -71,7 +75,8 @@ module.exports = {
       [
         {from:'./index.html', to: '../'},
         {from:'./img', to: '../img'}
-        ]
+        ],
+      {ignore: [{glob: 'svg/*'}]}
     )
   ]
 };

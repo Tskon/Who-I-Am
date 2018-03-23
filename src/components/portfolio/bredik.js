@@ -9,6 +9,11 @@ export default class Bredik extends React.Component {
         </h1>
         <a href="http://bredik.space/" target="_blank">http://bredik.space</a>
         <p>
+          Исходник на <a href="https://github.com/Tskon/Bredik" target="_blank">github
+          <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/></a>
+        </p>
+
+        <p>
           Это текущий проект, который представляет собой ресурс для разработчиков, содержащий готовые решения,
           которые можно легко внедрить.
         </p>

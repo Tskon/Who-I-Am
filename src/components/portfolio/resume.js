@@ -5,13 +5,9 @@ export default class Bredik extends React.Component {
     return (
       <div className="portfolio-item">
         <h1 className="portfolio-item__title">
-          Bredik
+          Этот сайт-портфолио
         </h1>
-        <a href="http://bredik.space/" target="_blank">http://bredik.space</a>
-        <p>
-          Исходник на
-          <a href="http://bredik.space/" target="_blank"> github</a>
-        </p>
+
         <p>
           Это текущий проект, который представляет собой ресурс для разработчиков, содержащий готовые решения,
           которые можно легко внедрить.
