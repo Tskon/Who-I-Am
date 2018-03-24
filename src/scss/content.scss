@@ -59,9 +59,9 @@ ul b {
 }
 
 // portfolio
-.portfolio-item{
+.portfolio-item {
   text-align: center;
-  h2{
+  h2 {
     margin-top: 40px;
     margin-bottom: 10px;
     font-size: 1.6rem;
@@ -72,6 +72,7 @@ ul b {
   position: fixed;
   top: 20%;
   left: 0;
+  transition: 200ms;
   @media all and (max-height: 800px) {
     top: 160px;
   }
@@ -83,11 +84,14 @@ ul b {
     padding: 0 30px 5px;
     border-top-right-radius: 10px;
     line-height: 43px;
+    transition: 200ms;
+    width: 175px;
   }
   .portfolio-menu__list {
     list-style: none;
     margin: 0;
     padding-left: 10px;
+    transition: 100ms;
   }
 }
 
@@ -99,11 +103,12 @@ ul b {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  ul{
-    max-width: 300px;
+  ul {
+    width: 25%;
     text-align: center;
     list-style: none;
-    li{
+    padding: 0;
+    li {
       text-align: inherit;
     }
   }
@@ -113,22 +118,51 @@ ul b {
   padding-top: 50px;
 }
 
-.portfolio-item__git-img{
+.portfolio-item__git-img {
   position: relative;
   top: 7px;
   margin: 0 5px;
   width: 30px;
 }
-.portfolio-item__git-img-big{
+
+.portfolio-item__git-img-big {
   width: 50%;
   margin: 0 auto;
 
 }
 
-.portfolio-item__list_center{
+.portfolio-item__list_center {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
 }
 
-// contacts
+@media all and (max-width: 800px) {
+  .portfolio-content {
+    margin-left: 50px;
+    min-width: 320px;
+  }
+  .portfolio-item__row {
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    ul{
+      width: 250px;
+    }
+  }
+  .portfolio-menu {
+    top: 30%;
+    position: fixed;
+  }
+  .portfolio-menu__title {
+    transform: rotate(90deg);
+    position: absolute;
+    border-top-left-radius: 10px;
+    left: -65px;
+  }
+  .portfolio-menu__list {
+    opacity: 0;
+    display: none;
+    position: absolute;
+  }
+}
