@@ -21,7 +21,7 @@
 }
 
 ul b {
-  font-size: 1.5em;
+  font-size: 1.3rem;
   line-height: 40px;
 }
 
@@ -59,6 +59,15 @@ ul b {
 }
 
 // portfolio
+.portfolio-item{
+  text-align: center;
+  h2{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+}
+
 .portfolio-menu {
   position: fixed;
   top: 20%;
@@ -87,7 +96,17 @@ ul b {
 }
 
 .portfolio-item__row {
-
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  ul{
+    max-width: 300px;
+    text-align: center;
+    list-style: none;
+    li{
+      text-align: inherit;
+    }
+  }
 }
 
 .portfolio-item__title {
@@ -99,6 +118,12 @@ ul b {
   top: 7px;
   margin: 0 5px;
   width: 30px;
+}
+
+.portfolio-item__list_center{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 // contacts

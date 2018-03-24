@@ -5,7 +5,7 @@ export default class Bredik extends React.Component {
     return (
       <div className="portfolio-item">
         <h1 className="portfolio-item__title">
-          Bredik
+          Git-Hub аккаунт
         </h1>
         <a href="http://bredik.space/" target="_blank">http://bredik.space</a>
         <p>
