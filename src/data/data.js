@@ -25,12 +25,12 @@ const portfolioMenuItems = [
     link: '/portfolio/resume'
   },
   {
-    title: 'GitHub',
-    link: '/portfolio/git'
-  },
-  {
     title: 'Bredik',
     link: '/portfolio/bredik'
+  },
+  {
+    title: 'GitHub',
+    link: '/portfolio/git'
   }
 ];
 

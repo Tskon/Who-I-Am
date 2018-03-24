@@ -20,7 +20,7 @@ export default class Skills extends React.Component {
     return (
       <div className="content">
         <div className="portfolio-menu">
-          <h2 className="portfolio-menu__title">Проекты</h2>
+          <h2 className="portfolio-menu__title">Мой код</h2>
           <ul className="portfolio-menu__list">
             {menuItems}
           </ul>
