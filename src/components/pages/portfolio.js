@@ -2,6 +2,7 @@ import React from 'react';
 import {contentHeight} from '../../lib/content';
 import {portfolioMenuItems} from '../../data/data';
 import {Switch, Route} from 'react-router-dom';
+import libPortfolio from '../../lib/portfolio';
 
 import MenuItem from '../menu/portfolio-menu-item';
 import Bredik from '../portfolio/bredik';
@@ -11,6 +12,7 @@ import Git from '../portfolio/git';
 export default class Skills extends React.Component {
   componentDidMount() {
     contentHeight('.content');
+    libPortfolio();
   }
 
   render() {

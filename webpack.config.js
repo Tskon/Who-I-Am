@@ -24,7 +24,6 @@ module.exports = {
   module: {
     rules: [
       {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"},
-
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -52,15 +51,15 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
           { loader: 'file-loader', options: {publicPath:'../../img', name: '[name].[ext]'} }
         ]
       },
-      {
-        test: /\.svg$/,
-        loader: 'svg-url-loader'
-      }
+      // {
+      //   test: /\.svg$/,
+      //   loader: 'svg-url-loader'
+      // }
     ]
   },
   devServer: {
@@ -76,7 +75,7 @@ module.exports = {
         {from:'./index.html', to: '../'},
         {from:'./img', to: '../img'}
         ],
-      {ignore: [{glob: 'svg/*'}]}
+      // {ignore: [{glob: 'svg/*'}]}
     )
   ]
 };

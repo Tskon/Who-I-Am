@@ -1,27 +1,54 @@
 import React from 'react';
 import {menuItems} from '../../data/data';
-import {setBurger} from '../../lib/burger-btn';
+import {setBurgerWidth} from '../../lib/burger-btn';
 
 import Item from './menu-item';
-import BurgerBtn from './burger-btn';
+import Burger from './burger-menu';
 
 export default class Menu extends React.Component {
-  componentDidMount(){
-    setBurger('.main-menu', 'menu-hidden');
+  constructor() {
+    super(...arguments);
+    this.state = {
+      isBurgerShow: false
+    };
+
+    this.setState = this.setState.bind(this);
   }
+
+  componentDidMount() {
+    setBurgerWidth(800,
+      () => {
+        this.setState({
+          isBurgerShow: true
+        })
+      },
+      () => {
+        this.setState({
+          isBurgerShow: false
+        });
+      })
+  }
+
   render() {
     let items = menuItems.map((item, i) => {
-      return <Item data={item} key={i}/>;
-    });
+        return <Item data={item} key={i}/>;
+      });
+
+    let menu = (
+        <ul className="main-menu">
+          {items}
+        </ul>
+    );
+
+    if (this.state.isBurgerShow) {
+      menu = (
+        <Burger/>
+      );
+    }
 
     return (
       <div>
-        <div className="main-menu__burger">
-          <BurgerBtn/>
-        </div>
-        <ul className="main-menu menu-hidden">
-          {items}
-        </ul>
+        {menu}
       </div>
     );
   }

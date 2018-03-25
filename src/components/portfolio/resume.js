@@ -13,7 +13,8 @@ export default class Bredik extends React.Component {
         </p>
         <p>
           Исходник на <a href="https://github.com/Tskon/Who-I-Am" target="_blank">github
-          <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/></a>
+          <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
+        </a>
         </p>
         <div>
           <h2>Технологии:</h2>

@@ -128,7 +128,6 @@ ul b {
 .portfolio-item__git-img-big {
   width: 50%;
   margin: 0 auto;
-
 }
 
 .portfolio-item__list_center {
@@ -142,27 +141,41 @@ ul b {
     margin-left: 50px;
     min-width: 320px;
   }
+
   .portfolio-item__row {
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    ul{
+    ul {
       width: 250px;
     }
   }
+
   .portfolio-menu {
     top: 30%;
     position: fixed;
   }
+
   .portfolio-menu__title {
     transform: rotate(90deg);
     position: absolute;
     border-top-left-radius: 10px;
     left: -65px;
+
   }
+
+  .portfolio-menu__title_active{
+
+  }
+
   .portfolio-menu__list {
     opacity: 0;
     display: none;
     position: absolute;
+  }
+
+  .portfolio-menu__list_active {
+    opacity: 1;
+    display: block;
   }
 }

@@ -64,31 +64,5 @@
   background-color: darken($second, 5%) !important;
   li {
     color: $light;
-    //text-decoration: underline;
-  }
-}
-
-.main-menu__burger {
-  display: none;
-}
-
-.menu-hidden {
-  display: flex;
-}
-
-@media all and (max-width: 800px) {
-  .main-menu {
-    flex-direction: column;
-    position: fixed;
-    top: 90px;
-    &:after {
-      display: none;
-    }
-  }
-  .main-menu__burger {
-    display: block;
-  }
-  .menu-hidden {
-    display: none;
   }
 }
