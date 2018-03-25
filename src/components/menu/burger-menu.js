@@ -21,6 +21,14 @@ export default class Burger extends React.Component {
   }
 
   render() {
+    let items;
+
+    if (this.state.isOpen) {
+      items = menuItems.map((item, i) => {
+        return <Item data={item} key={i}/>;
+      });
+    }
+
     return (
       <div className="burger-container">
         <div className="burger-menu">
@@ -32,7 +40,7 @@ export default class Burger extends React.Component {
           <span className="burger-menu-txt">Меню</span>
         </div>
         <ul className="burger-menu">
-
+          {items}
         </ul>
       </div>
     )
