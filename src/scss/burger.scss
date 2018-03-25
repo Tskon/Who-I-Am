@@ -1,6 +1,40 @@
+// menu list
+
+.burger-menu-list{
+  position: fixed;
+  top: 90px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  z-index: 999;
+  li{
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    &:hover{
+      color: $second;
+      background-color: #fff;
+    }
+  }
+
+  a{
+    text-decoration: none;
+  }
+}
+
+// menu button
+
 .burger-container {
+  position: fixed;
+  width: 100%;
   padding: 30px 60px;
+  height: 90px;
   background-color: $second;
+  cursor: pointer;
+
 }
 
 .burger-menu {

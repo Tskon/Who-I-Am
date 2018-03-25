@@ -13,7 +13,7 @@ export default class Burger extends React.Component {
   }
 
   componentDidMount() {
-    setBurger('.burger-menu', () => {
+    setBurger('.burger-container', () => {
       this.setState({
         isOpen: !this.state.isOpen
       })
@@ -39,7 +39,7 @@ export default class Burger extends React.Component {
           </div>
           <span className="burger-menu-txt">Меню</span>
         </div>
-        <ul className="burger-menu">
+        <ul className="burger-menu-list">
           {items}
         </ul>
       </div>
