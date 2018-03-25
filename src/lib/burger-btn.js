@@ -1,14 +1,13 @@
 exports.setBurger = (selector, toggleFunc) => {
-  const itemsList = document.querySelector(selector);
+  const burgerWrapper = document.querySelector(selector);
   const clickDelay = 500;
   let clickDelayTimer = null;
   const burger = document.querySelector(".burger-click-region");
 
-  burger.addEventListener("click", () => {
+  burgerWrapper.addEventListener("click", () => {
     if (clickDelayTimer === null) {
       burger.classList.toggle("active");
       burger.parentNode.classList.toggle("is-open");
-      // itemsList.classList.toggle(toggleClass);
       toggleFunc();
       if (!burger.classList.contains("active")) {
         burger.classList.add("closing");
@@ -22,11 +21,10 @@ exports.setBurger = (selector, toggleFunc) => {
     }
   });
 
-  itemsList.addEventListener("click", () => {
+  burgerWrapper.addEventListener("click", () => {
     if (clickDelayTimer === null) {
       burger.classList.remove("active");
       burger.parentNode.classList.remove("is-open");
-      // itemsList.classList.add(toggleClass);
       toggleFunc();
       if (!burger.classList.contains("active")) {
         burger.classList.add("closing");
