@@ -8,12 +8,12 @@
   padding: 0;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
   z-index: 999;
   li{
     text-align: center;
     color: #fff;
     padding: 15px;
+    transition: 500ms;
     &:hover{
       color: $second;
       background-color: #fff;

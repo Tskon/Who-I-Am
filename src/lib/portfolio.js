@@ -20,7 +20,7 @@ export default () => {
     changeActive();
   });
 
-  list.addEventListener('click', (e) => {
+  list.addEventListener('click', () => {
     changeActive(true);
   });
 
