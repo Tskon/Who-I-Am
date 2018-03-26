@@ -73,7 +73,8 @@ module.exports = {
     new CopyWebpackPlugin(
       [
         {from:'./index.html', to: '../'},
-        {from:'./img', to: '../img'}
+        {from:'./img', to: '../img'},
+        {from:'./data/examples', to: '../examples'}
         ],
       {ignore: [
         // {glob: 'svg/*'},

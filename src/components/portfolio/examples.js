@@ -4,40 +4,44 @@ export default class Bredik extends React.Component {
   render() {
     return (
       <div className="portfolio-item">
-        <h1 className="portfolio-item__title">
-          Сайт-портфолио
-        </h1>
-        <p>
-          Исходник на <a href="https://github.com/Tskon/Who-I-Am" target="_blank">github
-          <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
-        </a>
-        </p>
-        <div>
-          <h2>Технологии:</h2>
+        <h1 className="portfolio-item__title">Примеры работ</h1>
+        <p>(не размещены на хостинге)</p>
+        <div className="example">
+          <h2 className="example__title">Frontend часть корзины по PSD макету</h2>
+          <b>Техническое задание:</b>
+          <p> Из функционала необходимо реализовать:</p>
+          <ol>
+            <li>
+              Счетчик количества с возможностью добавления, отнимания количества. При количестве "1" - декремент
+              сделать opacity: 0.5, запретить клик по элементу.
+            </li>
+            <li>
+              Возможность удаления товара. При нажатии кнопки "Удалить", кнопка меняет свое состояние на "Вернуть".
+              Сама строка становится полупрозрачной, за исключением кнопки "Вернуть".
+            </li>
+            <li>
+              Клик на "Вернуть" возвращает строку в исходное состояние прозрачности и меняет кнопку на "Удалить"
+            </li>
+            <li>
+              Прогресс бар реализуется при взаимодействии с бэкендом. Бэкенд делать не надо, механика шкалы
+              следующая: в атрибут data-progress передается значение, например "50". Значение из атрибута определяет
+              длину заполненного бара в процентном эквиваленте - 50%. Цифровое обозначение прогресса тоже берется
+              из data-progress, к нему добавляется символ %. Значение выводится в конце заполненного прогресс-бара.
+              Сделать самостоятельно без подключения плагинов и готовых решений.
+            </li>
+          </ol>
           <div className="portfolio-item__row">
-            <ul>
-              <b>BackEnd</b><br/>
-              <li>Отсутствует. Навигация реализована на react HashRouter</li>
-            </ul>
-            <ul>
-              <b>FrontEnd</b><br/>
-              <li>JavaScript (es6)</li>
-              <li>React</li>
-              <li>SCSS</li>
-              <li>Без библиотек</li>
-              <li>Адаптив на flex</li>
-            </ul>
-            <ul>
-              <b>Cборка</b><br/>
-              <li>Webpack 3</li>
-              <li>Babel</li>
-              <li>SVG превращается в CSS</li>
-              <li>Uglify</li>
-            </ul>
+            <div>
+              <b>Стек технологий:</b>
+              <p>React/SCSS/Webpack/Flex</p>
+            </div>
+            <a href="./examples/busket/index.html" target="_blank"> Показать демо </a>
+            <div>
+              Исходник на <a href="https://github.com/Tskon/pizza-busket" target="_blank">github
+              <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
+            </a>
+            </div>
           </div>
-          <p>
-            Еще есть что доработать на данном сайте, поэтому в процессе работы над мелочами.
-          </p>
         </div>
       </div>
     )
