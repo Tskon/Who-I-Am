@@ -11,7 +11,7 @@ const mainMenuItems = [
   },
   {
     title: 'Портфолио',
-    link: '/portfolio/resume'
+    link: '/portfolio/examples'
   },
   {
     title: 'Контакты',
@@ -21,12 +21,12 @@ const mainMenuItems = [
 
 const portfolioMenuItems = [
   {
-    title: 'Этот сайт',
-    link: '/portfolio/resume'
-  },
-  {
     title: 'Demo\'s',
     link: '/portfolio/examples'
+  },
+  {
+    title: 'Этот сайт',
+    link: '/portfolio/resume'
   },
   {
     title: 'Bredik',

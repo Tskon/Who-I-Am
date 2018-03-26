@@ -16,7 +16,7 @@
     height: 3px;
     width: 100%;
     position: absolute;
-    top: 100px;
+    top: 80px;
     background: linear-gradient(to right, yellow, green, orange, violet, cyan, blue);
     transition: 400ms;
   }
@@ -26,7 +26,7 @@
     height: 3px;
     width: 100%;
     position: absolute;
-    top: 100px;
+    top: 80px;
     background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
     opacity: 0;
     transition: 400ms;
@@ -42,14 +42,14 @@
   & a {
     flex-grow: 1;
     padding: 0 5px;
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
     font-size: 2em;
     background-color: rgba(0, 0, 0, 0.03);
     color: $second;
     text-decoration: none;
-    transition: 400ms;
+    transition: 500ms;
     &:hover {
       background-color: $second;
       li {

@@ -31,18 +31,23 @@ export default class Bredik extends React.Component {
             </li>
           </ol>
           <div className="portfolio-item__row">
-            <div>
+            <div className="portfolio-item__block_space">
               <b>Стек технологий:</b>
               <p>React/SCSS/Webpack/Flex</p>
             </div>
-            <a href="./examples/busket/index.html" target="_blank"> Показать демо </a>
-            <div>
+            <div className="portfolio-item__block_space">
+              <a href="./examples/busket/index.html" target="_blank">Показать демо</a>
+            </div>
+            <div className="portfolio-item__block_space">
               Исходник на <a href="https://github.com/Tskon/pizza-busket" target="_blank">github
               <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
             </a>
             </div>
           </div>
         </div>
+        {/*<div className="example">*/}
+
+        {/*</div>*/}
       </div>
     )
   }
