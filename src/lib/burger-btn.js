@@ -1,16 +1,6 @@
 exports.setBurger = (selector, toggleFunc, menuItems) => {
-  function changeMenuText() {
-    const burgerText = document.querySelector('.burger-menu-txt');
-    menuItems.forEach((item) => {
-      if (item.link === window.location.hash.slice(1)) {
-        burgerText.innerHTML = item.title;
-      }
-    });
-  }
-  changeMenuText();
-
   const burgerWrapper = document.querySelector(selector);
-  const clickDelay = 200;
+  const clickDelay = 500;
   let clickDelayTimer = null;
   const burger = document.querySelector(".burger-click-region");
 
@@ -19,6 +9,7 @@ exports.setBurger = (selector, toggleFunc, menuItems) => {
       burger.classList.toggle("active");
       burger.parentNode.classList.toggle("is-open");
       toggleFunc();
+      // if (e.target.classList.contains('main-menu__li')) changeMenuText();
       if (!burger.classList.contains("active")) {
         burger.classList.add("closing");
       }
@@ -27,7 +18,6 @@ exports.setBurger = (selector, toggleFunc, menuItems) => {
         burger.classList.remove("closing");
         clearTimeout(clickDelayTimer);
         clickDelayTimer = null;
-        if (e.target.classList.contains('main-menu__li')) changeMenuText();
       }, clickDelay);
     }
   });
@@ -41,6 +31,7 @@ exports.setBurgerWidth = (num, callbackTrue, callbackFalse) => {
       callbackFalse();
     }
   }
+
   window.addEventListener('resize', () => {
     checkWidth();
   })

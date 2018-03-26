@@ -12,6 +12,16 @@ export default class Burger extends React.Component {
     }
   }
 
+  changeMenuText() {
+    let title;
+    menuItems.forEach((item) => {
+      if (item.link === window.location.hash.slice(1)) {
+        title = item.title;
+      }
+    });
+    return title;
+  }
+
   componentDidMount() {
     setBurger('.burger-container', () => {
       this.setState({
@@ -37,7 +47,7 @@ export default class Burger extends React.Component {
             <span className="burger-menu-piece"/>
             <span className="burger-menu-piece"/>
           </div>
-          <span className="burger-menu-txt">Меню</span>
+          <span className="burger-menu-txt">{this.changeMenuText()}</span>
         </div>
         <ul className="burger-menu-list">
           {items}

@@ -61,7 +61,6 @@
   top: 5px;
   cursor: default;
   transition: opacity 200ms ease-out, transform 200ms cubic-bezier(.34, .55, .25, .83);
-  transition-delay: 200ms;
 
   .is-open & {
     opacity: 0;
