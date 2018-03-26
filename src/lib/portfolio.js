@@ -23,10 +23,4 @@ export default () => {
   list.addEventListener('click', () => {
     changeActive(true);
   });
-
-  document.body.addEventListener('click', () => {
-    if (title.classList.contains('portfolio-menu__title')){
-      changeActive(true);
-    }
-  });
 }

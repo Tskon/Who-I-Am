@@ -157,9 +157,10 @@ ul b {
 
   .portfolio-menu {
     top: 50%;
-    left: -36px;
+    left: -250px;
     position: fixed;
     width: 250px;
+    z-index: 1;
     @media all and (max-height: 800px) {
       top: 300px;
     }
@@ -169,13 +170,13 @@ ul b {
     transform: rotate(90deg);
     position: absolute;
     border-top-left-radius: 10px;
-    left: -65px;
+    left: 150px;
     cursor: pointer;
     transition: 200ms;
   }
 
   .portfolio-menu__title_active{
-    left:120px;
+    left:350px;
   }
 
   .portfolio-menu__list {
@@ -187,7 +188,7 @@ ul b {
     opacity: 0;
     width: 100%;
     height: 250px;
-    left: -120px;
+    left: 0;
     top: -101px;
     background-color: rgba(0, 0, 0, 0.8);
     transition: 200ms;
@@ -207,7 +208,7 @@ ul b {
 
   .portfolio-menu__list_active {
     opacity: 1;
-    left: 1px;
+    left: 201px;
 
   }
 }

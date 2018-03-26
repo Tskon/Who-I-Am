@@ -6,22 +6,24 @@
   left: 0;
   margin: 0;
   padding: 0;
+  width: 100%;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+  z-index: 10;
   li{
     text-align: center;
     color: #fff;
     padding: 15px;
     transition: 500ms;
+    z-index: 10;
     &:hover{
       color: $second;
       background-color: #fff;
     }
   }
-
   a{
     text-decoration: none;
+    z-index: 10;
   }
 }
 
