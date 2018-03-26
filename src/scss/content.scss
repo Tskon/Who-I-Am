@@ -95,8 +95,12 @@ ul b {
     background-color: rgba(0, 0, 0, 0.1);
     border-bottom-right-radius: 10px;
     .portfolio-menu__item_active{
-      color: #000;
+      color: #999;
       text-decoration: none;
+      cursor: default;
+      & li:hover{
+        color: #999;
+      }
     }
   }
 }
