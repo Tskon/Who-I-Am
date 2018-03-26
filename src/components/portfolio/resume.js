@@ -8,10 +8,6 @@ export default class Bredik extends React.Component {
           Сайт-портфолио
         </h1>
         <p>
-          Это текущий проект, который представляет собой ресурс для разработчиков, содержащий готовые решения,
-          которые можно легко внедрить.
-        </p>
-        <p>
           Исходник на <a href="https://github.com/Tskon/Who-I-Am" target="_blank">github
           <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
         </a>
@@ -39,6 +35,9 @@ export default class Bredik extends React.Component {
               <li>Uglify</li>
             </ul>
           </div>
+          <p>
+            Еще есть что доработать на данном сайте, поэтому в процессе работы над мелочами.
+          </p>
         </div>
       </div>
     )
