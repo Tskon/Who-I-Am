@@ -26,8 +26,7 @@
     z-index: 10;
   }
   .main-menu__item_active li{
-    background-color: rgba(255, 255, 255, 1);
-    color: $second;
+    color: lighten($second, 20%);
   }
 }
 
