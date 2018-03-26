@@ -92,14 +92,15 @@ ul b {
     list-style: none;
     margin: 0;
     padding: 10px 0 20px 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.03);
+    border: solid 1px $second;
     border-bottom-right-radius: 10px;
     .portfolio-menu__item_active{
-      color: #999;
+      color: lighten($second, 20%);
       text-decoration: none;
       cursor: default;
       & li:hover{
-        color: #999;
+        color: lighten($second, 20%);
       }
     }
   }
