@@ -75,7 +75,10 @@ module.exports = {
         {from:'./index.html', to: '../'},
         {from:'./img', to: '../img'}
         ],
-      // {ignore: [{glob: 'svg/*'}]}
+      {ignore: [
+        // {glob: 'svg/*'},
+        {glob: 'tmp/*'}
+        ]}
     )
   ]
 };

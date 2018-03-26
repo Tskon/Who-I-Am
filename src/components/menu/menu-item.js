@@ -3,7 +3,9 @@ import {NavLink} from 'react-router-dom';
 
 export default class MenuItem extends React.Component {
   isActiveFunc(link){
-    return link === document.location.hash.slice(1);
+    link = link.split('/');
+    const hash = document.location.hash.slice(1).split('/');
+    return link[1] === hash[1];
   }
   render() {
     return (

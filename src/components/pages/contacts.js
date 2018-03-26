@@ -9,6 +9,7 @@ export default class Contacts extends React.Component{
   render() {
     return (
       <div className="content">
+        <h2>Буду рад общению</h2>
         <ul className="contacts">
           <li>Мобильный: +7-963-323-33-83</li>
           <li>Telegram: @beatxd</li>
