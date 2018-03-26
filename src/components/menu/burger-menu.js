@@ -17,7 +17,7 @@ export default class Burger extends React.Component {
       this.setState({
         isOpen: !this.state.isOpen
       })
-    });
+    }, menuItems);
   }
 
   render() {

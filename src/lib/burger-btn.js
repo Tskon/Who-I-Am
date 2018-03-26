@@ -1,10 +1,20 @@
-exports.setBurger = (selector, toggleFunc) => {
+exports.setBurger = (selector, toggleFunc, menuItems) => {
+  function changeMenuText() {
+    const burgerText = document.querySelector('.burger-menu-txt');
+    menuItems.forEach((item) => {
+      if (item.link === window.location.hash.slice(1)) {
+        burgerText.innerHTML = item.title;
+      }
+    });
+  }
+  changeMenuText();
+
   const burgerWrapper = document.querySelector(selector);
-  const clickDelay = 500;
+  const clickDelay = 200;
   let clickDelayTimer = null;
   const burger = document.querySelector(".burger-click-region");
 
-  burgerWrapper.addEventListener("click", () => {
+  burgerWrapper.addEventListener("click", (e) => {
     if (clickDelayTimer === null) {
       burger.classList.toggle("active");
       burger.parentNode.classList.toggle("is-open");
@@ -17,22 +27,7 @@ exports.setBurger = (selector, toggleFunc) => {
         burger.classList.remove("closing");
         clearTimeout(clickDelayTimer);
         clickDelayTimer = null;
-      }, clickDelay);
-    }
-  });
-
-  burgerWrapper.addEventListener("click", () => {
-    if (clickDelayTimer === null) {
-      burger.classList.remove("active");
-      burger.parentNode.classList.remove("is-open");
-      toggleFunc();
-      if (!burger.classList.contains("active")) {
-        burger.classList.add("closing");
-      }
-      clickDelayTimer = setTimeout(() => {
-        burger.classList.remove("closing");
-        clearTimeout(clickDelayTimer);
-        clickDelayTimer = null;
+        if (e.target.classList.contains('main-menu__li')) changeMenuText();
       }, clickDelay);
     }
   });
