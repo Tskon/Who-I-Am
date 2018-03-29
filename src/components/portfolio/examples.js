@@ -45,9 +45,23 @@ export default class Bredik extends React.Component {
             </div>
           </div>
         </div>
-        {/*<div className="example">*/}
-
-        {/*</div>*/}
+        <div className="example">
+          <h2 className="example__title">Лист строй-товаров из JSON</h2>
+          <div className="portfolio-item__row">
+            <div className="portfolio-item__block_space">
+              <b>Стек технологий:</b>
+              <p>React/SCSS/Webpack/Flex</p>
+            </div>
+            <div className="portfolio-item__block_space">
+              <a href="./examples/products-list/index.html" target="_blank">Показать демо</a>
+            </div>
+            <div className="portfolio-item__block_space">
+              Исходник на <a href="https://github.com/Tskon/Test-tasks/tree/master/product-card" target="_blank">github
+              <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
+            </a>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
