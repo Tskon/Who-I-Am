@@ -47,28 +47,28 @@ export default class Bredik extends React.Component {
               горизонтальный макет (резиновый в определенных границах)
             </li>
             <li>
-              Количество товара: вводить либо цифрами в окошко ввода, либо кнопками увеличить, уменьшить.
-              Меньше нуля ограничение и проверка на число.
+              Количество товара: вводить либо цифрами в окошко ввода, либо кнопками увеличить/уменьшить.
+              Меньше нуля ограничение и проверка на число
             </li>
             <li>
-              Из JSON изначально при загрузке страницы забирается весь список товаров, выводятся по несколько, есть
+              Из JSON изначально при загрузке страницы забирается весь список товаров, выводятся по 4 элемента, есть
               кнопка «загрузить еще» (без перезагрузки страницы)
             </li>
             <li>
               Цвет слова «наличие» зависит от доступности товара в JSON, для теста изменил значение у третьего товара
             </li>
             <li>
-              Подсчеты количества квадратных метров в упаовке и стоимость в баллах автоматическая
+              Подсчеты количества квадратных метров в упаковке и стоимость в баллах автоматическая
             </li>
             <li>
               Парсинг JSON: Учтены недоработки списков (убраны лишние знаки и разделители), раздел "могут понадобится"
-              оформлен в виде ссылок на дополнительные товары.
+              оформлен в виде ссылок на дополнительные товары
             </li>
           </ol>
           <div className="portfolio-item__row">
             <div className="portfolio-item__block_space">
               <b>Стек технологий:</b>
-              <p>React/SCSS/Webpack/Flex</p>
+              <p>React/SCSS/Webpack+Babel/Flex</p>
             </div>
             <div className="portfolio-item__block_space">
               <a href="./examples/products-list/index.html" target="_blank">Показать демо</a>
@@ -107,7 +107,7 @@ export default class Bredik extends React.Component {
           <div className="portfolio-item__row">
             <div className="portfolio-item__block_space">
               <b>Стек технологий:</b>
-              <p>React/SCSS/Webpack/Flex</p>
+              <p>React/SCSS/Webpack+Babel/Flex</p>
             </div>
             <div className="portfolio-item__block_space">
               <a href="./examples/busket/index.html" target="_blank">Показать демо</a>
