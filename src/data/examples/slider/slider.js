@@ -33,5 +33,4 @@ function Slider(selector = 'body', options = {colors:{background:'#fff', text:'#
   };
 
   render();
-
 }
