@@ -81,6 +81,10 @@ export default class Bredik extends React.Component {
           </div>
         </div>
         <div className="example">
+          <h2 className="example__title">Адаптивный слайдер:</h2>
+          <iframe src="./examples/slider/slider.html" frameBorder="0" className="example__iframe-big"/>
+        </div>
+        <div className="example">
           <h2 className="example__title">Frontend часть корзины по PSD макету</h2>
           <b>Техническое задание:</b>
           <p> Из функционала необходимо реализовать:</p>

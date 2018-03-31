@@ -1,0 +1,12 @@
+.tskon-slider{
+  width: 100%;
+}
+
+.tskon-slider__content-row{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tskon-slider__left-array{
+
+}
