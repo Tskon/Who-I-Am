@@ -4,10 +4,8 @@
   "description": "resume-on-react",
   "main": "dist/index.html",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w",
-    "start": "webpack-dev-server --open",
-    "production": "webpack -p"
+    "dev": "webpack --watch --mode development",
+    "prod": "webpack --mode production"
   },
   "author": "TsKon",
   "license": "MIT",
