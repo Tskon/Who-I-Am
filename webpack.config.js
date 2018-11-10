@@ -1,104 +1,79 @@
-//basic vars
-const webpack = require('webpack');
 const path = require('path');
-
-//plugins
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
-const isProduction = (process.env.NODE_ENV === 'production');
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
-  entry: {
-    app: ['./app.js', './scss/style.scss']
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist/js'),
-    publicPath: "./js/"
-  },
-  devtool: (isProduction) ? '' : 'source-map',
-  module: {
-    rules: [
-      {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"},
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
+    entry: {
+        main: './src/app.js',
+    },
+    output: {
+        filename: 'js/[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        // publicPath: './'
+    },
+    resolve: {
+        modules: [ path.resolve(__dirname, "src"), "node_modules" ]
+    },
+    devtool: 'inline-source-map',
+    module: {
+        rules: [
             {
-              loader: 'css-loader',
-              options: {sourceMap: true}
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true,
-                ident: 'postcss',
-                plugins: (loader) => [
-                  require('autoprefixer')()
+                test: /\.(png|svg|gif|jpe?g)$/,
+                use: [
+                    'file-loader?name=img/[name].[ext]'
                 ]
-              }
             },
             {
-              loader: 'sass-loader',
-              options: {sourceMap: true}
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {publicPath: '../'}
+                    },
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [ require('autoprefixer')({
+                                'browsers': [ '> 1%', 'last 2 versions' ]
+                            }) ],
+                        }
+                    },
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                }
             }
-          ],
-          fallback: "style-loader",
-        })
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/,
-        use: [
-          { loader: 'file-loader', options: {publicPath:'../../img', name: '[name].[ext]'} }
         ]
-      },
-      // {
-      //   test: /\.svg$/,
-      //   loader: 'svg-url-loader'
-      // }
-    ]
-  },
-  devServer: {
-    host: 'localhost',
-    port: 8080,
-    open: 'index.html',
-    contentBase: path.resolve(__dirname, 'dist')
-  },
-  plugins: [
-    new ExtractTextPlugin("../css/[name].css"),
-    new CopyWebpackPlugin(
-      [
-        {from:'./index.html', to: '../'},
-        {from:'./img', to: '../img'},
-        {from:'./data/examples', to: '../examples'}
-        ],
-      {ignore: [
-        // {glob: 'svg/*'},
-        {glob: 'tmp/*'}
-        ]}
-    )
-  ]
+    },
+    plugins: [
+        // new CleanWebpackPlugin([ 'public' ]),
+        new CopyWebpackPlugin([ { from: 'src/img/', to: 'img/',toType: 'dir'} ], {/*options*/}),
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html',
+        }),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+            // filename: "style.css",
+            // chunkFilename: "css/[id].css"
+        })
+    ],
+    optimization:
+        {
+            minimizer: [ new OptimizeCSSAssetsPlugin({}) ]
+        }
+    ,
+    stats: {
+        colors: true,
+        chunks: true
+    }
 };
-
-if (isProduction) {
-  module.exports.plugins.push(
-    new UglifyJSPlugin({sourceMap: true})
-  );
-  // module.exports.plugins.push(
-  //   new ImageminPlugin({
-  //     test: /\.(png|jpe?g|dif)$/i
-  //   })
-  // );
-  module.exports.plugins.push(
-    new CleanWebpackPlugin(['dist'])
-  );
-  module.exports.plugins.push(
-    new webpack.LoaderOptionsPlugin({
-      minimize:true
-    })
-  );
-}
