@@ -1,13 +1,13 @@
 import React from 'react';
-import {contentHeight} from '../../lib/content';
+import {contentHeight} from 'lib/content';
 import {Switch, Route} from 'react-router-dom';
-import libPortfolio from '../../lib/portfolio';
+import libPortfolio from 'lib/portfolio';
 
-import PortfolioMenu from '../menu/portfolio-menu';
-import Bredik from '../portfolio/bredik';
-import Resume from '../portfolio/resume';
-import Git from '../portfolio/git';
-import Examples from '../portfolio/examples';
+import PortfolioMenu from 'components/menu/portfolio-menu';
+import Bredik from 'components/portfolio/bredik';
+import Resume from 'components/portfolio/resume';
+import Git from 'components/portfolio/git';
+import Examples from 'components/portfolio/examples';
 
 export default class Skills extends React.Component {
   componentDidMount() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {contentHeight} from '../../lib/content';
+import {contentHeight} from 'lib/content';
 
 export default class Header extends React.Component {
   componentDidMount() {

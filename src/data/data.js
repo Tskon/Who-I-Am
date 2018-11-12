@@ -38,5 +38,7 @@ const portfolioMenuItems = [
   }
 ];
 
-exports.menuItems = mainMenuItems;
-exports.portfolioMenuItems = portfolioMenuItems;
+export {mainMenuItems, portfolioMenuItems}
+
+// exports.menuItems = mainMenuItems;
+// exports.portfolioMenuItems = portfolioMenuItems;

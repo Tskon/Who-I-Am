@@ -1,9 +1,9 @@
 import React from 'react';
-import {menuItems} from '../../data/data';
-import {setBurgerWidth} from '../../lib/burger-btn';
+import {menuItems} from 'data/data';
+import {setBurgerWidth} from 'lib/burger-btn';
 
-import Item from './menu-item';
-import Burger from './burger-menu';
+import Item from 'components/menu/menu-item';
+import Burger from 'components/menu/burger-menu';
 
 export default class Menu extends React.Component {
   constructor() {
