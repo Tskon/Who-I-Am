@@ -1,5 +1,5 @@
 //@import "~normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Exo+2|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
 @import "variables";
 @import "burger";
 @import "menu";
@@ -22,7 +22,7 @@ body{
   display: flex;
   justify-content: center;
   //background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(206,202,215,1) 41%, rgba(233,214,242,1) 100%);
-  background-color: lighten(#5796C7, 30%);
+  background-color: lighten($mainBg, 30%);
 }
 
 main {

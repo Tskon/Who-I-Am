@@ -9,7 +9,7 @@
     text-align: left;
   }
   h1 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Exo 2', cursive;
   }
 }
 
@@ -48,7 +48,7 @@ ul b {
     margin: 10px;
     border-radius: 10px;
     text-align: center;
-    border: $second solid 1px;
+    //border: $second solid 1px;
     background-color: rgba(0, 0, 0, 0.03);
   }
   @media all and (max-width: 520px) {
