@@ -56,7 +56,7 @@ module.exports = {
     },
     plugins: [
         // new CleanWebpackPlugin([ 'public' ]),
-        new CopyWebpackPlugin([ { from: 'src/img/', to: 'img/',toType: 'dir'} ], {/*options*/}),
+        new CopyWebpackPlugin([ { from: 'src/img/', to: 'img/',toType: 'dir'},{ from: 'src/data/examples', to: 'examples/',toType: 'dir'} ], {/*options*/}),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
