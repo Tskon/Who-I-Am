@@ -14,8 +14,8 @@ export default class Bredik extends React.Component {
             можно получить из файла product.json.
           </p>
           <p>Пример шаблона товара:</p>
-          <a href="./examples/products-list/product-card.jpg" target="_blank">
-            <img src="./examples/products-list/product-card.jpg" alt="Пример верстки" title="Пример верстки"
+          <a href="examples/products-list/index.html" target="_blank">
+            <img src="examples/products-list/preview.jpg" alt="Пример верстки" title="Пример верстки"
                  className="example__big-img"/>
           </a>
           <p> Из функционала необходимо реализовать:</p>
@@ -71,18 +71,14 @@ export default class Bredik extends React.Component {
               <p>React/SCSS/Webpack+Babel/Flex</p>
             </div>
             <div className="portfolio-item__block_space">
-              <a href="./examples/products-list/index.html" target="_blank">Показать демо</a>
+              <a href="examples/products-list/index.html" target="_blank">Показать демо</a>
             </div>
             <div className="portfolio-item__block_space">
               Исходник на <a href="https://github.com/Tskon/Test-tasks/tree/master/product-card" target="_blank">github
-              <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
+              <img src="img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
             </a>
             </div>
           </div>
-        </div>
-        <div className="example">
-          <h2 className="example__title">Адаптивный слайдер:</h2>
-          <iframe src="./examples/slider/slider.html" frameBorder="0" className="example__iframe-big"/>
         </div>
         <div className="example">
           <h2 className="example__title">Frontend часть корзины по PSD макету</h2>
@@ -114,11 +110,11 @@ export default class Bredik extends React.Component {
               <p>React/SCSS/Webpack+Babel/Flex</p>
             </div>
             <div className="portfolio-item__block_space">
-              <a href="./examples/busket/index.html" target="_blank">Показать демо</a>
+              <a href="examples/busket/index.html" target="_blank">Показать демо</a>
             </div>
             <div className="portfolio-item__block_space">
               Исходник на <a href="https://github.com/Tskon/pizza-busket" target="_blank">github
-              <img src="../../img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
+              <img src="img/svg/github.svg" alt="github" title="github" className="portfolio-item__git-img"/>
             </a>
             </div>
           </div>

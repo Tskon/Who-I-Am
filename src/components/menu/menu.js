@@ -1,5 +1,5 @@
 import React from 'react';
-import {menuItems} from 'data/data';
+import {mainMenuItems as menuItems} from 'data/data';
 import {setBurgerWidth} from 'lib/burger-btn';
 
 import Item from 'components/menu/menu-item';
