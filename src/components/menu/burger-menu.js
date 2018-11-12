@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {setBurger} from 'lib/burger-btn';
-import {menuItems} from 'data/data';
+import {mainMenuItems as menuItems} from 'data/data';
 import Item from 'components/menu/menu-item';
 
 export default class Burger extends React.Component {
